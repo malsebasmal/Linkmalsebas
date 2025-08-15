@@ -1,3 +1,55 @@
-<div {...Astro.props} class="hidden w-xl h-fit bg-white fixed inset-0">
-  Share
+---
+import { Image } from "astro:assets"
+import X from "@images/icons/X.astro"
+import malsebasmal from "/public/malsebasmal.webp"
+import Link from "@images/icons/Link.astro"
+
+const { id } = Astro.props
+---
+
+<div id={id} class="hidden text-black fixed inset-0 bg-black/30 z-50 flex items-center justify-center">
+  <div class="relative w-md h-fit bg-white border-2 p-4">
+    <button id="popUpClose" class="absolute top-0 right-0 p-4 cursor-pointer">
+      <X />
+    </button>
+    <div class="w-full flex flex-col items-center justify-center">
+      <p class="w-full text-center font-semibold text-xl">
+        Share Links :)
+      </p>
+      <Image src={malsebasmal} alt="malsebasmal icon" class="w-60" />
+      <button id="link" class="border-2 p-4 hover:bg-black hover:text-white cursor-pointer">
+        <Link />
+      </button>
+      <p id="text" class="mt-2">
+        Copy link
+      </p>
+    </div>
+  </div>
 </div>
+
+<script>
+  document.addEventListener("click", (e) => {
+    if(e.target?.closest("#popUpClose")) {
+      document.querySelector("#popUp")?.classList.add("hidden")
+    }
+  })
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){
+      document.querySelector("#popUp")?.classList.add("hidden")
+    }
+  })
+  document.querySelector("#link")?.addEventListener("click", async (e) => {
+    const linkText = "http://localhost:4321ss"
+    const text = document.querySelector("#text")
+    try {
+      await navigator.clipboard.writeText(linkText)
+      text.textContent = "Copied"
+      
+      setTimeout(() => {
+        text.textContent = "Copy link"
+      }, 2000)
+    } catch (error) {
+      console.log(error)      
+    }
+  })
+</script>

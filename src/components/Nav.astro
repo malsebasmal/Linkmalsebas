@@ -9,19 +9,19 @@ import PopUp from "@components/PopUp.astro"
 
 <nav class="w-full h-full">
   <ul class="w-full h-full flex items-center justify-between">
-    <li id="popupOpen" class="group cursor-pointer">
-      <div class="w-10 h-10 flex items-center justify-center">
+    <li id="popUpOpen" class="group">
+      <button class="w-10 h-10 border-2 dark:border-0 flex items-center justify-center cursor-pointer">
         <div class="group-hover:hidden flex items-center justify-center">
           <Image src={malsebasmal} alt="malsebasmal icon" class="w-10" />
         </div>
         <div class="hidden group-hover:flex items-center justify-center">
           <Share />
         </div>
-      </div>
+      </button>
     </li>
     <div class="flex items-center justify-center">
       <li class="flex items-center justify-center">
-        <button>
+        <button id="">
           <Moon />
           <Sun />
         </button>
@@ -33,14 +33,10 @@ import PopUp from "@components/PopUp.astro"
     </div>
   </ul>
 </nav>
-<PopUp id="popup" />
+<PopUp id="popUp" />
 
-<script>
-  let isOpen = false
-  const popupOpen = document.querySelector("#popupOpen")
-  const TogglePopUp = () => {
-    isOpen = !isOpen
-    document.querySelector("#popup")?.classList.toggle("hidden")
-  }
-  popupOpen?.addEventListener("click", TogglePopUp)
+<script>  
+  document.querySelector("#popUpOpen")?.addEventListener("click", () => {
+    document.querySelector("#popUp")?.classList.toggle("hidden")
+  })
 </script>
