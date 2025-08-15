@@ -21,7 +21,13 @@ import "../styles/styles.css"
 		<meta property="og:image" content={metadata.og.image} />
 		<meta property="og:type" content={metadata.og.type} />
 	</head>
-	<body class="bg-black text-white flex items-center justify-center">
+	<body class="bg-white text-black dark:bg-black dark:text-white flex items-center justify-center">
 		<slot />
 	</body>
 </html>
+
+<style>
+	:root {
+		color-scheme: light dark;
+	}
+</style>

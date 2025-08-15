@@ -9,20 +9,22 @@ import PopUp from "@components/PopUp.astro"
 
 <nav class="w-full h-full">
   <ul class="w-full h-full flex items-center justify-between">
-    <li id="popupOpen" class="group [perspective:1000px] w-10 cursor-pointer">
-      <div class="relative w-full h-full transition-transform duration-200 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div class="absolute inset-0 [backface-visibility:hidden] flex items-center justify-center">
+    <li id="popupOpen" class="group cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center">
+        <div class="group-hover:hidden flex items-center justify-center">
           <Image src={malsebasmal} alt="malsebasmal icon" class="w-10" />
         </div>
-        <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
+        <div class="hidden group-hover:flex items-center justify-center">
           <Share />
         </div>
       </div>
     </li>
-    <div>
-      <li>
-        <Moon />
-        <Sun />
+    <div class="flex items-center justify-center">
+      <li class="flex items-center justify-center">
+        <button>
+          <Moon />
+          <Sun />
+        </button>
       </li>
       <li>
         <p>EN</p>
