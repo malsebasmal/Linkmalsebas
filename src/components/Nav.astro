@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets"
+import malsebasmal from "/public/malsebasmal.webp"
+import Share from "@images/icons/Share.astro"
+import Moon from "@images/icons/Moon.astro"
+import Sun from "@images/icons/Sun.astro"
+import PopUp from "@components/PopUp.astro"
+---
+
+<nav class="w-full h-full">
+  <ul class="w-full h-full flex items-center justify-between">
+    <li id="popupOpen" class="group [perspective:1000px] w-10 cursor-pointer">
+      <div class="relative w-full h-full transition-transform duration-200 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        <div class="absolute inset-0 [backface-visibility:hidden] flex items-center justify-center">
+          <Image src={malsebasmal} alt="malsebasmal icon" class="w-10" />
+        </div>
+        <div class="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
+          <Share />
+        </div>
+      </div>
+    </li>
+    <div>
+      <li>
+        <Moon />
+        <Sun />
+      </li>
+      <li>
+        <p>EN</p>
+        <p>ES</p>
+      </li>
+    </div>
+  </ul>
+</nav>
+<PopUp id="popup" />
+
+<script>
+  let isOpen = false
+  const popupOpen = document.querySelector("#popupOpen")
+  const TogglePopUp = () => {
+    isOpen = !isOpen
+    document.querySelector("#popup")?.classList.toggle("hidden")
+  }
+  popupOpen?.addEventListener("click", TogglePopUp)
+</script>

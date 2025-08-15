@@ -1,22 +1,27 @@
+---
+import metadata from "@metadata/metadata.ts"
+import "../styles/styles.css"
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/malsebasmal.webp" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{metadata.title}</title>
+
+		<meta name="description" content={metadata.description} />
+		<link rel="canonical" href={metadata.canonical} />
+
+		<meta property="og:title" content={metadata.og.title} />
+		<meta property="og:description" content={metadata.og.description} />
+		<meta property="og:url" content={metadata.og.url} />
+		<meta property="og:image" content={metadata.og.image} />
+		<meta property="og:type" content={metadata.og.type} />
 	</head>
-	<body>
+	<body class="bg-black text-white flex items-center justify-center">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
