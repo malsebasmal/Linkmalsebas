@@ -31,19 +31,19 @@ Linkmalsebas/
 - Node.js v18+
 - pnpm
 
-### Instalación
+### Installation
 
 ```bash
 pnpm install
 ```
 
-### Desarrollo
+### Development
 
 ```bash
 pnpm run dev
 ```
 
-### Producción
+### Production
 
 ```bash
 pnpm run build
