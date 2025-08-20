@@ -38,8 +38,8 @@ const { id } = Astro.props
       document.querySelector("#popUp")?.classList.add("hidden")
     }
   })
-  document.querySelector("#link")?.addEventListener("click", async (e) => {
-    const linkText = "http://localhost:4321ss"
+  document.querySelector("#link")?.addEventListener("click", async () => {
+    const linkText = window.location.href
     const text = document.querySelector("#text")
     try {
       await navigator.clipboard.writeText(linkText)
