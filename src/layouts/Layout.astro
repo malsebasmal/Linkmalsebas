@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions"
 import metadata from "@metadata/metadata.ts"
 import "../styles/styles.css"
 ---
@@ -20,6 +21,8 @@ import "../styles/styles.css"
 		<meta property="og:url" content={metadata.og.url} />
 		<meta property="og:image" content={metadata.og.image} />
 		<meta property="og:type" content={metadata.og.type} />
+
+		<ClientRouter />
 	</head>
 	<body class="bg-white text-black dark:bg-black dark:text-white flex items-center justify-center">
 		<slot />
