@@ -20,9 +20,9 @@ import PopUp from "@components/PopUp.astro"
       </button>
     </li>
     <li class="flex items-center justify-center">
-      <button id="">
-        <Moon />
-        <Sun />
+      <button id="buttonTheme">
+        <Moon id="dark" class="" />
+        <Sun id="light" class="hidden" />
       </button>
     </li>
   </ul>
@@ -33,4 +33,29 @@ import PopUp from "@components/PopUp.astro"
   document.querySelector("#popUpOpen")?.addEventListener("click", () => {
     document.querySelector("#popUp")?.classList.toggle("hidden")
   })
+
+  const html = document.documentElement;
+  const buttonTheme = document.querySelector("#buttonTheme");
+  const moon = document.querySelector("#dark");
+  const sun = document.querySelector("#light");
+
+  const updateThemeIcons = () => {
+    const isDark = html.classList.contains("dark");
+    moon?.classList.toggle("hidden", !isDark);
+    sun?.classList.toggle("hidden", isDark);
+  };
+
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme) {
+    html.classList.toggle("dark", storedTheme === "dark");
+  } else {
+    html.classList.toggle("dark", window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+  updateThemeIcons();
+
+  buttonTheme?.addEventListener("click", () => {
+    html.classList.toggle("dark");
+    localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
+    updateThemeIcons();
+  });
 </script>
