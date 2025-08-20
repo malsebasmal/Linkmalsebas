@@ -1,12 +1,12 @@
 const metadata = {
-  title: "malsebasmal Socials Links",
+  title: "Malsebasmal social Links",
   description:
-    "Todos mis links en un solo lugar.",
+    "All my links in one place",
   canonical: "https://fivebrains.pages.dev",
   og: {
-    title: "malsebasmal Socials Links",
+    title: "Malsebasmal social Links",
     description:
-      "Todos mis links en un solo lugar",
+      "All my links in one place",
     url: "https://fivebrains.pages.dev",
     image: 'https://fivebrains.pages.dev/assets/og-image.png',
     type: 'website'
