@@ -1,46 +1,59 @@
-# Astro Starter Kit: Basics
 
-```sh
-pnpm create astro@latest -- --template basics
+# Linkmalsebas
+
+## 🔗 Description
+
+Linkmalsebas is like "linktree" but with my own social links and brutal design.
+
+## 🏗 Project Structure
+
+```
+Linkmalsebas/
+├── public/              # Assets static
+├── src/
+│   ├── assets/         # Assets dynamic
+│   ├── components/         # Components
+│   ├── images/         # Images and icons
+│   │   ├── icons/         # Icons
+│   ├── layouts/         # Layouts
+│   ├── metadata/         # Metadata
+│   ├── pages/          # Main pages
+│   ├── styles/         # Global Styles and Tailwind Settings
+├── astro.config.mjs    # Astro Settings
+├── package.json        # Dependencies
+├── tsconfig.json        # Alias configuration
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Instructions for Execution
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+- Node.js v18+
+- pnpm
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+### Instalación
+
+```bash
+pnpm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Desarrollo
 
-## 🧞 Commands
+```bash
+pnpm run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+### Producción
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```bash
+pnpm run build
+pnpm run preview
+```
 
-## 👀 Want to learn more?
+## 🤝 Contribution
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Fork the project
+2. Create your branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
