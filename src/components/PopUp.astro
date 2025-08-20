@@ -40,6 +40,7 @@ const { id } = Astro.props
   })
   document.querySelector("#link")?.addEventListener("click", async () => {
     const linkText = window.location.href
+    console.log(linkText)
     const text = document.querySelector("#text")
     try {
       await navigator.clipboard.writeText(linkText)

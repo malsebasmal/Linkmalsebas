@@ -16,18 +16,33 @@ const SocialLinks = [
     name: "malsebasmal"
   },
   {
+    icon: Instagram,
+    link: "https://instagram.com/sebasmalonce",
+    name: "sebasmalonce"
+  },
+  {
+    icon: Instagram,
+    link: "https://instagram.com/malojosmal",
+    name: "malojosmal"
+  },
+  {
+    icon: Instagram,
+    link: "https://instagram.com/malferiasmal",
+    name: "malferiasmal"
+  },
+  {
     icon: Threads,
-    link: "https://threads.net/@sebasmalonce",
+    link: "https://threads.net/@malsebasmal",
     name: "sebasmalonce"
   },
   {
     icon: Pinterest,
-    link: "https://pinterest.com/malojosmal",
+    link: "https://pinterest.com/malsebasmal",
     name: "malojosmal"
   },
   {
     icon: Spotify,
-    link: "https://open.spotify.com/user/malferiasmal",
+    link: "https://open.spotify.com/user/malsebasmal",
     name: "malferiasmal"
   },
   {
