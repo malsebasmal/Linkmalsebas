@@ -6,8 +6,8 @@ import SocialLinks from "@assets/socialLinks.ts"
   <ul class="w-fit h-full flex flex-col items-start justify-center gap-5">
     {SocialLinks.map(({icon: Icon, link, name}) => (
       <li class="group">
-        <a href={link} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 group-hover:line-through">
-          <Icon class="size-10 group-hover:drop-shadow-[0_0px_5px_black] dark:group-hover:drop-shadow-[0_0px_5px_white]" /> <h2>{name}</h2>
+        <a href={link} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 group-hover:line-through group-focus:line-through">
+          <Icon class="size-10 group-hover:drop-shadow-[0_0px_5px_black] group-focus:drop-shadow-[0_0px_5px_black] dark:group-hover:drop-shadow-[0_0px_5px_white] dark:group-focus:drop-shadow-[0_0px_5px_white]" /> <h2>{name}</h2>
         </a>
       </li>
     ))}
