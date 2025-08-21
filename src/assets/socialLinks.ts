@@ -33,17 +33,17 @@ const SocialLinks = [
   {
     icon: Threads,
     link: "https://threads.net/@malsebasmal",
-    name: "sebasmalonce"
+    name: "malsebasmal"
   },
   {
     icon: Pinterest,
     link: "https://pinterest.com/malsebasmal",
-    name: "malojosmal"
+    name: "malsebasmal"
   },
   {
     icon: Spotify,
-    link: "https://open.spotify.com/user/malsebasmal",
-    name: "malferiasmal"
+    link: "https://open.spotify.com/user/22j44wgiuiuvh4dq7c74cgqmi?si=7Tu2bpGYQXqYlQ0-Dle6WA",
+    name: "malsebasmal"
   },
   {
     icon: SubStack,
