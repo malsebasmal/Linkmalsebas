@@ -27,8 +27,8 @@ const SocialLinks = [
   },
   {
     icon: Instagram,
-    link: "https://instagram.com/malferiasmal",
-    name: "malferiasmal"
+    link: "https://instagram.com/malexperimentomal",
+    name: "malexperimentomal"
   },
   {
     icon: Threads,
