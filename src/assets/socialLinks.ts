@@ -10,7 +10,6 @@ import Mastodon from "@images/icons/Mastodon.astro"
 
 export const MAIN_HANDLE = "@malsebasmal"
 
-// Redes principales que corresponden a @malsebasmal
 export const mainLinks = [
   {
     icon: Instagram,
@@ -54,7 +53,6 @@ export const mainLinks = [
   },
 ]
 
-// Cuentas secundarias, temáticas o archivos con handles distintos
 export const projectLinks = [
   {
     icon: Instagram,

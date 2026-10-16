@@ -11,10 +11,8 @@ const { id } = Astro.props
   id={id} 
   class="hidden text-white fixed inset-0 bg-black/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 cursor-pointer font-mono"
 >
-  {/* Modal Container: cursor-default para evitar cierre accidental al hacer clic dentro */}
   <div class="relative w-full max-w-sm bg-black border border-white p-6 shadow-2xl flex flex-col items-center gap-5 cursor-default">
     
-    {/* Botón de cierre 'X' */}
     <button 
       id="popUpClose" 
       class="absolute top-3 right-3 p-1.5 text-neutral-400 hover:text-white border border-transparent hover:border-white transition-all cursor-pointer"
@@ -23,13 +21,11 @@ const { id } = Astro.props
       <X class="size-4" />
     </button>
 
-    {/* Header del Modal */}
     <div class="w-full text-center mt-2">
       <span class="text-[10px] tracking-widest uppercase text-neutral-400">// SHARE PROFILE</span>
       <h3 class="text-base font-medium tracking-wide mt-1">@malsebasmal</h3>
     </div>
 
-    {/* Imagen / Avatar en estética retro */}
     <div class="w-24 h-24 border border-white/30 p-1  overflow-hidden my-1">
       <Image 
         src={malsebasmal} 
@@ -38,7 +34,6 @@ const { id } = Astro.props
       />
     </div>
 
-    {/* Botón de copiar enlace */}
     <button 
       id="link" 
       class="w-full flex items-center justify-center gap-2.5 py-3 px-4 border border-white bg-black hover:bg-white text-white hover:text-black transition-all duration-150 cursor-pointer group"
@@ -56,32 +51,27 @@ const { id } = Astro.props
   const linkBtn = document.querySelector("#link")
   const textLabel = document.querySelector("#text")
 
-  // Función para cerrar el popup
   const closePopUp = () => {
     popUp?.classList.add("hidden")
   }
 
-  // Cerrar al hacer clic en el botón X
   popUpClose?.addEventListener("click", (e) => {
     e.stopPropagation()
     closePopUp()
   })
 
-  // Cerrar al hacer clic fuera del recuadro (Backdrop)
   popUp?.addEventListener("click", (e) => {
     if (e.target === popUp) {
       closePopUp()
     }
   })
 
-  // Cerrar al presionar la tecla Escape
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !popUp?.classList.contains("hidden")) {
       closePopUp()
     }
   })
 
-  // Copiar al portapapeles
   linkBtn?.addEventListener("click", async () => {
     const linkText = window.location.href
     try {
