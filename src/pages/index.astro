@@ -2,15 +2,20 @@
 import Layout from "@layouts/Layout.astro"
 import Nav from "@components/Nav.astro"
 import Links from "@components/Links.astro"
+import Footer from "@components/Footer.astro" // Nuevo componente
 ---
 
 <Layout>
-	<div class="w-full md:w-xl h-dvh md:border-x-2 border-black dark:border-white p-4 flex flex-col">
-		<header class="w-full h-fit">
-			<Nav />
-		</header>
-		<main class="w-full flex-1 mt-5 pb-5 md:mt-0 md:pb-0">
-			<Links />
-		</main>
-	</div>
+  <div class="w-full md:w-xl min-h-dvh md:border-x border-white/20 px-4 py-2 flex flex-col justify-between font-mono">
+    
+    <header class="w-full">
+      <Nav />
+    </header>
+
+    <main class="w-full my-auto py-8">
+      <Links />
+    </main>
+
+		<Footer />
+  </div>
 </Layout>

@@ -5,36 +5,36 @@ import "../styles/styles.css"
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/malsebasmal.webp" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{metadata.title}</title>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/malsebasmal.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{metadata.title}</title>
 
-		<meta name="description" content={metadata.description} />
-		<link rel="canonical" href={metadata.canonical} />
+    <meta name="description" content={metadata.description} />
+    <link rel="canonical" href={metadata.canonical} />
 
-		<meta property="og:title" content={metadata.og.title} />
-		<meta property="og:description" content={metadata.og.description} />
-		<meta property="og:url" content={metadata.og.url} />
-		<meta property="og:image" content={metadata.og.image} />
-		<meta property="og:type" content={metadata.og.type} />
+    <meta property="og:title" content={metadata.og.title} />
+    <meta property="og:description" content={metadata.og.description} />
+    <meta property="og:url" content={metadata.og.url} />
+    <meta property="og:image" content={metadata.og.image} />
+    <meta property="og:type" content={metadata.og.type} />
 
-		<ClientRouter />
-	</head>
-	<body class="bg-white text-black dark:bg-black dark:text-white flex items-center justify-center">
-		<slot />
-	</body>
+    <ClientRouter />
+  </head>
+  <body class="bg-black text-white flex items-center justify-center min-h-screen">
+    <slot />
+  </body>
 </html>
 
 <style>
-	:root {
-		color-scheme: light dark;
-	}
+  :root {
+    color-scheme: dark;
+  }
 
-	html {
-		scroll-behavior: smooth;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
 </style>

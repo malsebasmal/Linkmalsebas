@@ -1,61 +1,27 @@
 ---
-import { Image } from "astro:assets"
-import malsebasmal from "/public/malsebasmal.webp"
 import Share from "@images/icons/Share.astro"
-import Moon from "@images/icons/Moon.astro"
-import Sun from "@images/icons/Sun.astro"
 import PopUp from "@components/PopUp.astro"
 ---
 
-<nav class="w-full h-full">
-  <ul class="w-full h-full flex items-center justify-between">
-    <li id="popUpOpen" class="group">
-      <button class="w-10 h-10 border-2 dark:border-0 flex items-center justify-center cursor-pointer">
-        <div class="group-hover:hidden flex items-center justify-center">
-          <Image src={malsebasmal} alt="malsebasmal icon" class="w-10" />
-        </div>
-        <div class="hidden group-hover:flex items-center justify-center">
-          <Share />
-        </div>
-      </button>
-    </li>
-    <li class="flex items-center justify-center">
-      <button id="buttonTheme" class="cursor-pointer">
-        <Sun id="dark" class="" />
-        <Moon id="light" class="hidden" />
-      </button>
-    </li>
-  </ul>
+<nav class="w-full h-full py-4 px-6 flex items-center justify-between border-b border-white/10 font-mono">
+  {/* Identificador conceptual en lugar de repetir el handle */}
+  <span class="text-xs tracking-widest text-neutral-400 uppercase">
+    // INDEX.LINKS
+  </span>
+
+  <button 
+    id="popUpOpen" 
+    class="flex items-center gap-2 px-3 py-1.5 border border-white/80 hover:bg-white hover:text-black transition-all duration-150 cursor-pointer text-xs tracking-wider uppercase group"
+  >
+    <Share class="size-3.5 transition-transform group-hover:scale-110" />
+    <span>Share</span>
+  </button>
 </nav>
+
 <PopUp id="popUp" />
 
 <script>  
   document.querySelector("#popUpOpen")?.addEventListener("click", () => {
     document.querySelector("#popUp")?.classList.toggle("hidden")
-  })
-
-  const html = document.documentElement
-  const buttonTheme = document.querySelector("#buttonTheme")
-  const moon = document.querySelector("#dark")
-  const sun = document.querySelector("#light")
-
-  const updateThemeIcons = () => {
-    const isDark = html.classList.contains("dark")
-    moon?.classList.toggle("hidden", !isDark)
-    sun?.classList.toggle("hidden", isDark)
-  }
-
-  const storedTheme = localStorage.getItem("theme")
-  if (storedTheme) {
-    html.classList.toggle("dark", storedTheme === "dark")
-  } else {
-    html.classList.toggle("dark", window.matchMedia("(prefers-color-scheme: dark)").matches)
-  }
-  updateThemeIcons()
-
-  buttonTheme?.addEventListener("click", () => {
-    html.classList.toggle("dark")
-    localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light")
-    updateThemeIcons()
   })
 </script>

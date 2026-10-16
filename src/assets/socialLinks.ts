@@ -8,68 +8,76 @@ import XSocial from "@images/icons/XSocial.astro"
 import Reddit from "@images/icons/Reddit.astro"
 import Mastodon from "@images/icons/Mastodon.astro"
 
+export const MAIN_HANDLE = "@malsebasmal"
 
-const SocialLinks = [
+// Redes principales que corresponden a @malsebasmal
+export const mainLinks = [
   {
     icon: Instagram,
+    platform: "Instagram",
     link: "https://instagram.com/malsebasmal",
-    name: "malsebasmal"
-  },
-  {
-    icon: Instagram,
-    link: "https://instagram.com/sebasmalonce",
-    name: "sebasmalonce"
-  },
-  {
-    icon: Instagram,
-    link: "https://instagram.com/malojosmal",
-    name: "malojosmal"
-  },
-  {
-    icon: Instagram,
-    link: "https://instagram.com/malexperimentomal",
-    name: "malexperimentomal"
   },
   {
     icon: Threads,
+    platform: "Threads",
     link: "https://threads.net/@malsebasmal",
-    name: "malsebasmal"
   },
   {
     icon: Pinterest,
+    platform: "Pinterest",
     link: "https://pinterest.com/malsebasmal",
-    name: "malsebasmal"
   },
   {
     icon: Spotify,
+    platform: "Spotify",
     link: "https://open.spotify.com/user/22j44wgiuiuvh4dq7c74cgqmi?si=7Tu2bpGYQXqYlQ0-Dle6WA",
-    name: "malsebasmal"
   },
   {
     icon: SubStack,
+    platform: "Substack",
     link: "https://substack.com/@malsebasmal",
-    name: "malsebasmal"
-  },
-  {
-    icon: Tumblr,
-    link: "https://pinkisbadismal.tumblr.com",
-    name: "pinkisbadismal"
   },
   {
     icon: XSocial,
+    platform: "X / Twitter",
     link: "https://x.com/malsebasmal",
-    name: "malsebasmal"
   },
   {
     icon: Reddit,
+    platform: "Reddit",
     link: "https://reddit.com/user/malsebasmal",
-    name: "malsebasmal"
   },
   {
     icon: Mastodon,
+    platform: "Mastodon",
     link: "https://mastodon.social/@malsebasmal",
-    name: "malsebasmal"
   },
 ]
 
-export default SocialLinks
+// Cuentas secundarias, temáticas o archivos con handles distintos
+export const projectLinks = [
+  {
+    icon: Instagram,
+    platform: "Instagram",
+    handle: "@sebasmalonce",
+    link: "https://instagram.com/sebasmalonce",
+  },
+  {
+    icon: Instagram,
+    platform: "Instagram",
+    handle: "@malojosmal",
+    link: "https://instagram.com/malojosmal",
+  },
+  {
+    icon: Instagram,
+    platform: "Instagram",
+    handle: "@malexperimentomal",
+    link: "https://instagram.com/malexperimentomal",
+  },
+  {
+    icon: Tumblr,
+    platform: "Tumblr",
+    handle: "@pinkisbadismal",
+    link: "https://pinkisbadismal.tumblr.com",
+  },
+]
