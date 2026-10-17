@@ -7,6 +7,8 @@ import Tumblr from "@images/icons/Tumblr.astro"
 import XSocial from "@images/icons/XSocial.astro"
 import Reddit from "@images/icons/Reddit.astro"
 import Mastodon from "@images/icons/Mastodon.astro"
+import GoodReads from "@images/icons/GoodReads.astro"
+import Letterboxd from "@images/icons/Letterboxd.astro"
 
 export const MAIN_HANDLE = "@malsebasmal"
 
@@ -22,14 +24,9 @@ export const mainLinks = [
     link: "https://threads.net/@malsebasmal",
   },
   {
-    icon: Pinterest,
-    platform: "Pinterest",
-    link: "https://pinterest.com/malsebasmal",
-  },
-  {
-    icon: Spotify,
-    platform: "Spotify",
-    link: "https://open.spotify.com/user/22j44wgiuiuvh4dq7c74cgqmi?si=7Tu2bpGYQXqYlQ0-Dle6WA",
+    icon: XSocial,
+    platform: "X / Twitter",
+    link: "https://x.com/malsebasmal",
   },
   {
     icon: SubStack,
@@ -37,9 +34,27 @@ export const mainLinks = [
     link: "https://substack.com/@malsebasmal",
   },
   {
-    icon: XSocial,
-    platform: "X / Twitter",
-    link: "https://x.com/malsebasmal",
+    icon: Pinterest,
+    platform: "Pinterest",
+    link: "https://pinterest.com/malsebasmal",
+  },
+  {
+    icon: Tumblr,
+    platform: "Tumblr",
+    handle: "@malsebasmal",
+    link: "https://malsebasmal.tumblr.com",
+  },
+  {
+    icon: GoodReads,
+    platform: "GoodReads",
+    handle: "@malsebasmal",
+    link: "https://www.goodreads.com/malsebasmal",
+  },
+  {
+    icon: Letterboxd,
+    platform: "Letterboxd",
+    handle: "@malsebasmal",
+    link: "https://letterboxd.com/malsebasmal/",
   },
   {
     icon: Reddit,
@@ -57,25 +72,13 @@ export const projectLinks = [
   {
     icon: Instagram,
     platform: "Instagram",
-    handle: "@sebasmalonce",
-    link: "https://instagram.com/sebasmalonce",
-  },
-  {
-    icon: Instagram,
-    platform: "Instagram",
-    handle: "@malojosmal",
-    link: "https://instagram.com/malojosmal",
+    handle: "@malantoniomal",
+    link: "https://instagram.com/malantoniomal",
   },
   {
     icon: Instagram,
     platform: "Instagram",
     handle: "@malexperimentomal",
     link: "https://instagram.com/malexperimentomal",
-  },
-  {
-    icon: Tumblr,
-    platform: "Tumblr",
-    handle: "@pinkisbadismal",
-    link: "https://pinkisbadismal.tumblr.com",
   },
 ]
